@@ -23,6 +23,17 @@ def hello():
 def show_user_profile(username):
     return 'Hello, %s!' % username
 
+# Unique URLs / Redirection Behavior
+
+
+@app.route('/projects/')
+def projects():
+    return 'The project page'
+
+
+@app.route('/about')
+def about():
+    return 'The about page'
 
 if __name__ == '__main__':
     app.run()
