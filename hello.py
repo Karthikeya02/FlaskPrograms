@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -28,7 +28,7 @@ def show_user_profile(username):
 
 @app.route('/projects/')
 def projects():
-    return 'The project page'
+    return render_template('projects.html')
 
 
 @app.route('/about')
