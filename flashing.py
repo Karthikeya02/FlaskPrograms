@@ -2,7 +2,7 @@ from flask import *
 app = Flask(__name__)
 app.secret_key = "abc"
 
-@app.route('/index')
+@app.route('/')
 def home():
     return render_template("index2.html")
 

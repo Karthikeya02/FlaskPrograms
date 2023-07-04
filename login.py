@@ -28,9 +28,9 @@ def logout():
 def profile():
     if 'email' in session:
         email = session['email']
-        return render_template('profile.html', name=email)
+        return render_template('home.html', name=email)
     else:
         return redirect('/login')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port = 5000, debug=True)
